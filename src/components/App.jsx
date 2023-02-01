@@ -15,13 +15,16 @@ export default => importo sin llaves
 
 //Components
 import { Navbar } from "./Navbar/Navbar";
+import { ItemListContainer } from "./ItemListContainer/ItemListContainer";
 
 export const App = () => {
+  //<NombreComponente>
   return (
-   <div>
-    <Navbar/>
-   </div>
-  
+   <>
+    <Navbar nombre={"La Madriguera"}/>
+    <ItemListContainer greeting={"Bienvenidas/os! tienda de artículos mágicos"}/>
+   </>
+ 
   );
 }
 

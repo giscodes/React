@@ -1,14 +1,17 @@
 import { CartWidget } from "../CartWidget/CartWidget";
 import { Categorias } from "./Categorias/Categorias";
 import { Secciones } from "./Secciones/Secciones";
+import { Link } from "react-router-dom";
 export const Navbar = ({ nombre }) => {
   return (
-    <div>
+    <div className="navContainer">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            {nombre}
-          </a>
+          <li className="nav-item">
+            <Link className="nav-link" to={"/"}>
+              <button className="brand">{nombre}</button>
+            </Link>
+          </li>
           <button
             className="navbar-toggler"
             type="button"
@@ -25,7 +28,7 @@ export const Navbar = ({ nombre }) => {
               <Secciones />
               <Categorias />
             </ul>
-            <CartWidget cantCarrito={10}/>{" "}
+            <CartWidget cantCarrito={10} />
           </div>
         </div>
       </nav>

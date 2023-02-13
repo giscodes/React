@@ -12,20 +12,25 @@ export default => importo sin llaves
 
 */
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-//Components
-import { Navbar } from "./Navbar/Navbar";
-import { ItemListContainer } from "./ItemListContainer/ItemListContainer";
+//Components 
+import { Navbar } from './Navbar/Navbar';
+import { ItemListContainer } from './ItemListContainer/ItemListContainer';
+import { ItemDetailContainer } from './ItemDetailContainer/ItemDetailContainer';
 
 export const App = () => {
-  //<NombreComponente>
   return (
-   <>
-    <Navbar nombre={"La Madriguera"}/>
-    <ItemListContainer greeting={"Bienvenidas/os! tienda de artículos mágicos"}/>
-   </>
- 
-  );
+    <>
+      <BrowserRouter>
+        <Navbar nombre={"La Madriguera"}/>
+        <Routes>
+          <Route path='/' element={<ItemListContainer/>}/>
+          <Route path='/category/:idCategoria' element={<ItemListContainer/>}/>
+          <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+        </Routes>   
+      </BrowserRouter>  
+    </>
+  )
 }
-
 

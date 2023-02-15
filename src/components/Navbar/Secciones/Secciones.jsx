@@ -6,8 +6,9 @@ export const Secciones = () => {
           <Link className="nav-link" to={'/'}><button className="btn btn-dark">Home</button></Link>
         </li>
       <li className="nav-item">
-        <button className="btn btn-dark">Contacto</button>
+        <Link className="nav-link" to={""}><button className="btn btn-dark">Contacto</button></Link>
       </li>
+  
     </>
   );
 };

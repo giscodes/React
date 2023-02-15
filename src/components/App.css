@@ -3,7 +3,7 @@
 .cardProducto {
   width: 18rem;
   margin:4px;
-  background-color: hsl(0, 0, 97%);
+  background-color: #147d8b;
 }
 
 .cardProductos {
@@ -33,7 +33,10 @@ img {
   border-style: none;
   color: #147d8b;
 }
-.navContainer{
+.nav-brand{
+  list-style: none;
+}
+.container-fluid{
   display: grid;
-  grid-auto-rows: max-content;
+  justify-items: baseline;
 }

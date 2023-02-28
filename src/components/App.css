@@ -40,3 +40,6 @@ img {
   display: grid;
   justify-items: baseline;
 }
+.contForm{
+  margin-top: 20px;
+}
